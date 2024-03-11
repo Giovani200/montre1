@@ -1,0 +1,98 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: fantasy ;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url("../img/hor.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.horloge{
+    width: 330px;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/fond.jpg") no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    background-position: center;
+    border: 9px solid #fff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+}
+.horloge::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: rgb(254, 254, 254);
+    border-radius: 100%;    
+    z-index: 100;
+}
+.grandeaiguille, .petiteaiguille, .trotteuse{
+    position: absolute;
+}
+
+.grandeaiguille{
+    height: 120px;/* pour le bouger */
+   width: 100px;
+    
+}
+.petiteaiguille{
+height: 160px;/* pour le bouger */
+width: 160px;
+
+}
+.trotteuse{
+    width: 230px;/* pour le bouger */
+    height: 229px;
+
+}
+.grandeaiguille, .petiteaiguille, .trotteuse {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 100%;
+}
+.grandeaiguille::before{
+    content: '';
+    width: 13px;
+    height: 70px;/* pour augmenter sa taille */
+    position: absolute;
+    background-color: black;
+    border-radius: 6px 6px 0 0;
+}
+.petiteaiguille::before{
+    content: '';
+    width: 6px;
+    height: 100px;/* pour augmenter sa taille */
+    position: absolute;
+    background-color: #5c5454;
+    border-radius: 6px 6px 0 0;
+}
+.trotteuse::before{
+    content: '';
+    width: 4px;
+    height: 150px;/* pour augmenter sa taille */
+    position: absolute;
+    background-color: red;
+    border-radius: 6px 6px 0 0;
+}
+
+p{
+    color: rgb(42, 21, 21);
+    box-shadow: 0px 0px 9px 0px rgba(224, 10, 10, 0.75);
+    background-color: rgb(186, 142, 12);
+    background-size: 10px;
+}
